@@ -9,6 +9,9 @@ to add several utility functions that should make that process easier.
 
     npm install --save-dev react-jest-util
 
+If using the automocking feature of jest you should add **'node_modules/react-jest-util'**
+to the **unmockedModulePathPatterns** list in your config.
+
 ## API
 
 ### mockComponent
