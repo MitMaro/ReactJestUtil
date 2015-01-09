@@ -1,0 +1,19 @@
+{
+    "globals": {
+        "jest": true
+    },
+    "env": {
+        "node": true,
+        "jasmine": true
+    },
+    "rules": {
+        "curly": 1,
+        "global-strict": [1, "always"],
+        "no-use-before-define": [2, "nofunc"],
+        "radix": 1,
+        "guard-for-in": 1,
+        "no-multiple-empty-lines": 1,
+        "quotes": [2, "single"],
+        "no-underscore-dangle": true
+    }
+}

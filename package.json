@@ -1,0 +1,46 @@
+{
+  "name": "react-jest-util",
+  "version": "0.0.1",
+  "description": "A tool that assists in mocking of react components for use in jest",
+  "author": "Tim Oram <mitmaro@gmail.com> (http://mitmaro.ca)",
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/MitMaro/ReactJestUtil",
+  "main": "index.js",
+  "repository": "https://github.com/MitMaro/ReactJestUtil",
+  "engines" : {
+    "node" : ">= 0.10"
+  },
+  "bugs": {
+    "url" : "https://github.com/MitMaro/ReactJestUtil/issues"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "mocking",
+    "testing"
+  ],
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "optionalDependencies": {
+    "jest-cli": "^0.2.1"
+  },
+  "devDependencies": {
+    "react-tools": "^0.12.2"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "lib/__tests__/mocks"
+    ],
+    "scriptPreprocessor": "util/preprocessor.js",
+    "setupEnvScriptFile": "util/environment.js",
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
+  }
+}
