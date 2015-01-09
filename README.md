@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MitMaro/ReactJestUtil.svg)](https://travis-ci.org/MitMaro/ReactJestUtil)
+
 # React Jest Utility Library
 
 Testing react components in Jest can be a real pain at times. This library aims
