@@ -22,18 +22,28 @@ to the mock.
 
 #### Signature
 
-    object ReactJestUtil.mockComponent(string modulePath [, string tagName = 'div'])
+    object ReactJestUtil.mockComponent(string modulePath [, string tagName = 'div' [, object methods]])
 
 `modulePath` is the absolute path to the module, you can use `require.resolve`
 (or `require.requireActual.resolve` if in the context of jest) to obtain the
 absolute path from a relative path. `tagName` is an optional tag name that will
-be used for the mocked component, defaults to **div**.
+be used for the mocked component, defaults to **div**. `methods` is an object of
+key-method pairs that will be attached to the created component. This will also
+overwrite any react added methods, such as render.
 
-#### Usage
+#### Complete Usage Example
 
     var ReactJestUtil = require('react-jest-util');
     var mockedComponentPath = require.resolve('../path/to/component');
-    var mockedComponent = ReactJestUtil.mockComponent(mockedComponentPath, 'Tag Name');
+    var mockedComponent = ReactJestUtil.mockComponent(mockedComponentPath, 'Tag Name', {
+        render: function() {
+            return react.createElement(
+                'MyTestTag',
+                this.props,
+                this.props.children
+                );
+            }
+        });
 
 `mockedComponent` will contain a fully mocked React component that can be used
 in React Test Utilities `renderIntoDocument`.
