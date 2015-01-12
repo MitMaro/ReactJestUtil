@@ -24,9 +24,10 @@ to the mock.
 
     object ReactJestUtil.mockComponent(string modulePath [, string tagName = 'div'])
 
-`modulePath` is the absolute path to the module, you can use `require.resolve` to
-obtain the absolute path from a relative path. `tagName` is an optional tag name
-that will be used for the mocked component, defaults to **div**.
+`modulePath` is the absolute path to the module, you can use `require.resolve`
+(or `require.requireActual.resolve` if in the context of jest) to obtain the
+absolute path from a relative path. `tagName` is an optional tag name that will
+be used for the mocked component, defaults to **div**.
 
 #### Usage
 
