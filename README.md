@@ -20,6 +20,11 @@ This is similar to `mockCompoent` in the react test utilities but does a lot
 more. It will auto-mock all non-react functions in a component and restore props
 to the mock.
 
+#### Accessing mocked functions
+
+For convenience a reference to all the mocked methods of a component can be found
+as a key-value pair in `mockedComponent.mockedMethods`.
+
 #### Signature
 
     object ReactJestUtil.mockComponent(string modulePath [, string tagName = 'div' [, object methods]])
@@ -44,6 +49,7 @@ overwrite any react added methods, such as render.
                 );
             }
         });
+    console.log(mockedComponent.mockedMethods.foo.mock.calls); // assuming foo exists as a method on component
 
 `mockedComponent` will contain a fully mocked React component that can be used
 in React Test Utilities `renderIntoDocument`.
