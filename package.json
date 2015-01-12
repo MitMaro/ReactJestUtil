@@ -1,6 +1,6 @@
 {
   "name": "react-jest-util",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tool that assists in mocking of react components for use in jest",
   "author": "Tim Oram <mitmaro@gmail.com> (http://mitmaro.ca)",
   "contributors": [],
