@@ -1,3 +1,6 @@
+## Deprecation Notice
+This library only partially worked but it didn't fix the underlaying problem of proper unit testing of React components. An [upcoming pull request](https://github.com/facebook/react/pull/1877) on the React project should provide better support for what this library tried to achieve. 
+
 [![Build Status](https://travis-ci.org/MitMaro/ReactJestUtil.svg)](https://travis-ci.org/MitMaro/ReactJestUtil)
 
 # React Jest Utility Library
